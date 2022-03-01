@@ -1,0 +1,16 @@
+.nav .Navlink {
+  height: 15vh;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.image-container {
+  height: 100%;
+}
+h3 {
+  color: #fff;
+  margin-top: 30px;
+  font-size: 30px;
+}

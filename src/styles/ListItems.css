@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+.list-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 120px;
+}
+.list-item {
+  display: flex;
+  max-width: 800px;
+  width: 90%;
+  margin: 15px 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 111;
+}
+.list-item .list-item-image-container {
+  background-color: black;
+  width: 35%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: relative;
+  height: auto;
+}
+.list-item-image-container .list-item-image {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  opacity: 0.5;
+}
+.list-item-image-container .number {
+  font-family: "Aclonica", sans-serif;
+  color: #fff;
+  font-size: 6.5vw;
+  position: absolute;
+  top: 25%;
+  left: 16%;
+}
+
+.list-item .content {
+  padding-left: 10px;
+  background-color: #f3f3f3;
+  width: 69%;
+  padding-bottom: 10px;
+}
+.list-item .button-container {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 5px;
+  text-decoration: none;
+}
+.list-item .list-item-Navlink button {
+  padding: 8px 10px;
+  background-color: #000;
+  outline: 0;
+  border: 0;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.list-item .list-item-Navlink button:hover {
+  cursor: pointer;
+}
+
+.list-item .content .properties .prop {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.list-item .content .properties .prop .icons {
+  margin-right: 5px;
+}
+.list-item .content .properties .club .clubname {
+  margin-left: 50px;
+}
+.item-h2-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.item-h2-container :last-child {
+  margin-right: 30px;
+}
+.item-h2-container :last-child :hover {
+  cursor: pointer;
+}
+.list-item-data {
+  color: rgb(102, 101, 101);
+  margin-left: 5px;
+  font-weight: normal;
+}
+.button-container > * {
+  margin-right: 10px;
+}
+.button-container :last-child {
+  margin-right: 0;
+}
+.pagenate-container {
+  list-style: none;
+  margin-bottom: 50px;
+}
+.pagenate-container li {
+  display: inline;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 5px;
+}
+.pagenate-container .active {
+  color: #000;
+  border: 1px solid #000;
+  background-color: #fff;
+}
+.pagenate-container li:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+@media (max-width: 525px) {
+  .list-item-data {
+    font-size: 10px;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 442px) {
+  .list-item-data {
+    font-size: 9px;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  .list-item .content .properties .club {
+    flex-direction: column;
+  }
+  .list-item .content .properties .club .clubname {
+    margin-left: 0px;
+  }
+}
+.btn-star-page {
+  align-self: flex-end;
+  margin-right: 25%;
+}
+.btn-star-page button {
+  padding: 10px 20px;
+  background-color: #c93333;
+  outline: 0;
+  border: 0;
+  color: #fff;
+  border-radius: 5px;
+}
+.btn-star-page button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
