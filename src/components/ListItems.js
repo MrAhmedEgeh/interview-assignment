@@ -6,7 +6,7 @@ import '../styles/ListItems.css';
 import GitHub from '../Assets/wp2603375.jpg';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faUserAlt, faHashtag, faStar, } from '@fortawesome/free-solid-svg-icons';
+import {faUserAlt, faHashtag, faStar } from '@fortawesome/free-solid-svg-icons';
 
 
 
