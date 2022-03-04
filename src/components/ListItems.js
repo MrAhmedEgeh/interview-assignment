@@ -13,7 +13,7 @@ import {faUserAlt, faHashtag, faStar } from '@fortawesome/free-solid-svg-icons';
 const ListItems = ({datas}) => {
 
     const [clubs, setClubs] = useState([])
-    const [currentItems, setCurrentItems] = useState([]);
+    
 
     // star
     const [starPage, setStarPage] = useState(false);
@@ -25,9 +25,11 @@ const ListItems = ({datas}) => {
     
     const [BlackStyle] = useState({color: 'black'});
     const [GrayStyle] = useState({color: 'rgb(202, 195, 195)'});
+   
      const indexOfLastPost = currentPage * itemsPerPage;
      const indexOfFirstPost = indexOfLastPost - itemsPerPage;
-    
+     const currentItems = clubs.slice(indexOfFirstPost, indexOfLastPost);
+
      let PageNums = []
      for(let i = 1; i <= Math.ceil(clubs.length / itemsPerPage); i++){
         PageNums.push(i);
@@ -36,15 +38,9 @@ const ListItems = ({datas}) => {
      
     useEffect(() => {
         setClubs(datas)
-        if(clubs.length > 0){
-            setCurrentItems(clubs.slice(indexOfFirstPost, indexOfLastPost))
-        }
         console.log(currentItems)
     }, [])
-    useEffect(() => {
-        setCurrentItems(clubs.slice(indexOfFirstPost, indexOfLastPost))
-    }, [currentPage, clubs, setCurrentPage])
-    //HANDLERS
+
     const changePage = (e) => {
         
         setCurrentPage(parseInt(e.target.textContent));
@@ -145,16 +141,7 @@ const ListItems = ({datas}) => {
                         <div className="content" id={club.id}>
                             <div className="item-h2-container">
                             <h2>{club.name}</h2>
-                            {
-                                localStorage.getItem(club.id) === null ?
-                                (
-                                    <FontAwesomeIcon style={{color: 'rgb(202, 195, 195)'}} size="lg"icon={faStar}/>
-                                )
-                                :
-                                (
-                                    <FontAwesomeIcon style={{color: 'black'}} className='star-color' size="lg" icon={faStar}/>
-                                )
-                            }
+                            <FontAwesomeIcon style={BlackStyle} className='star-color' size="lg" icon={faStar}/>
                             
                             </div>
                             <div className="properties">
